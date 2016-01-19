@@ -14,4 +14,8 @@ describe ("leapYear", function() {
   it("is true for years divisible by 400", function(){
     expect(leapYear(2400)).to.equal(true);
   });
+
+  it("is true for non-numerical values", function(){
+    expect(leapYear("NaN")).to.equal(false);
+  });
 });

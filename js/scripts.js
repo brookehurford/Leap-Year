@@ -13,12 +13,19 @@ $(document).ready(function() {
 
     $(".year").text(year);
 
-    if (!result) {
+    if (isNaN(year)) {
+      $("#error").show()
+      $("#result").hide();
+    }
+    else if (!result) {
+      $("#result").show();
       $(".not").text("not");
-    } else {
+    }
+    else {
+      $("#result").show();
       $(".not").text("");
     }
-    $("#result").show();
+
     event.preventDefault();
   });
 });
